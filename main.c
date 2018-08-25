@@ -78,6 +78,9 @@ void TaskProcess(void)
 			WWDG->CR = 0xff; //WWDG Enable
 			while(1){ dPrintf("."); }
 		}
+		else if(RX_DATA[2] == _CMD_DVD) //0xXX
+		{
+		}
                 //이 곳에 수신 커멘드 추가...
 		else CReqErrMsg(RX_DATA[2], RX_DATA[5]);
 	}
